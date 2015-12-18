@@ -12,11 +12,17 @@ html, body{
   color: #fff;
   text-align: center;
 }
+@media only screen and (max-width: 450px) {
+  body{
+    background-image: url("../images/takeoff-blue-sm.png");
+  }
+}
 
 .content{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  margin: 25px;
 }
 .content h2{
   font-size: 58px;
@@ -24,7 +30,6 @@ html, body{
 
 .content p{
   font-family: 'Open Sans';
-  margin: 25px;
 }
 .content .italic{
   font-style: italic;
@@ -32,7 +37,7 @@ html, body{
 .btn{
   margin-top: 5px;
   border: 1px solid #fff;
-  border-radius: 10%;
+  border-radius: 15%;
 }
 .btn a{
   color: #fff;
