@@ -1,44 +1,60 @@
-html, body{
-  height: 100%;
+body{
+  margin-bottom: 30px;
+}
+.divider{
+  margin: 60px 0;
+}
 
-  background-image: url("../images/takeoff-blue.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed;
-  background-position: center;
-  background-color: black;
-
-  font-family: 'Quicksand', sans-serif;
-  color: #fff;
+/* TITLE SECTION
+================================================================================
+*/
+.title{
+  height: 500px;
+  margin-bottom: 60px;
+  background-image: url("../img/wood.jpg");
   text-align: center;
 }
-@media only screen and (max-width: 450px) {
-  body{
-    background-image: url("../images/takeoff-blue-sm.png");
-  }
-}
-
-.content{
+.title .container{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin: 25px;
 }
-.content h2{
-  font-size: 58px;
+.title h1{
+  color: #fff;
 }
 
-.content p{
-  font-family: 'Open Sans';
+/* img border */
+.img-circle{
+  border: 7px solid #333;
 }
-.content .italic{
-  font-style: italic;
+
+/* ABOUT SECTION
+================================================================================
+*/
+.about{
+  text-align: center;
 }
-.btn{
-  margin-top: 5px;
-  border: 1px solid #fff;
-  border-radius: 15%;
+
+/* LINK SECTION
+================================================================================
+*/
+.link{
+  background-color: #333;
 }
-.btn a{
+.link .container{
+  text-align: center;
+  color: #fff;
+}
+.link hr{
+  max-width: 50px;
+  border-width: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.link .row{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.link a{
   color: #fff;
 }
