@@ -11,6 +11,7 @@ body{
   margin-bottom: 20px;
   background-image: url("../img/wood.jpg");
   background-size: cover;
+  background-position: center;
   text-align: center;
 }
 .title .container{
