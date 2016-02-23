@@ -44,3 +44,8 @@ body{
 .link a{
   color: #333;
 }
+
+.fa-spin-slow {
+-webkit-animation: fa-spin 6s infinite linear;
+animation: fa-spin 6s infinite linear;
+}
