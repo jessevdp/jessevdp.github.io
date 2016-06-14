@@ -1,4 +1,5 @@
-body{
+body, html{
+  height: 100%;
   margin-bottom: 15px;
   color: #333;
 }
@@ -7,7 +8,9 @@ body{
 ================================================================================
 */
 .title{
-  height: 500px;
+  height: 100%;
+  width: 100%;
+  display: table;
   margin-bottom: 20px;
   background-image: url("../img/wood.jpg");
   background-size: cover;
@@ -15,12 +18,17 @@ body{
   text-align: center;
 }
 .title .container{
+  display: table-cell;
+  vertical-align: middle;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .title h1{
   color: #fff;
+}
+.title i{
+  opacity: 0.5;
+  color: #fff;
+  padding-top: 20px;
 }
 
 /* img border */
@@ -40,6 +48,7 @@ body{
 */
 .link{
   text-align: center;
+  margin-bottom: 5%;
 }
 .link a{
   color: #333;
