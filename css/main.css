@@ -7,7 +7,9 @@ html,body {
 
   /* Main global styles */
   color: #fff;
-
+  /* bg collor (if image screws up & page overflow) */
+  background-color: #000;
+  /* Background image */
   background-image: url("../img/bg.jpg");
   background-position: center;
   background-size: cover;
@@ -35,10 +37,13 @@ html,body {
 }
 
 .link{
+  /* Fixing the links to the bottom of the page. */
   position: fixed;
-  width: 100%;
   bottom: 0px;
+  /* Setting its width to a 100% so we can align it's content in the centre of the page. */
+  width: 100%;
   text-align: center;
+
   margin-bottom: 3em;
 }
 .link a{
@@ -52,7 +57,7 @@ html,body {
 /* xs screens */
 @media screen and (max-width: 768px) {
   .title h1{
-    font-size: 7em;
+    font-size: 8em;
   }
   .title h3{
     font-size: 1em;
@@ -65,7 +70,7 @@ html,body {
 /* sm screens */
 @media screen and (min-width: 768px) {
   .title h1{
-    font-size: 9em;
+    font-size: 12em;
   }
   .title h3{
     font-size: 2em;
@@ -78,7 +83,7 @@ html,body {
 /* md screens */
 @media screen and (min-width: 992px) {
   .title h1{
-    font-size: 12em;
+    font-size: 15em;
   }
   .title h3{
     font-size: 3em;
@@ -91,6 +96,6 @@ html,body {
 /* lg screens */
 @media screen and (min-width: 1200px) {
   .title h1{
-    font-size: 15em;
+    font-size: 18em;
   }
 }
