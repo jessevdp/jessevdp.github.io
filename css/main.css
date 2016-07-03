@@ -1,60 +1,96 @@
-body, html{
-  height: 100%;
-  margin-bottom: 15px;
-  color: #333;
-}
+html,body {
+  /* Avoid page overflow */
+  margin: 0px;
 
-/* TITLE SECTION
-================================================================================
-*/
-.title{
   height: 100%;
   width: 100%;
-  display: table;
-  margin-bottom: 20px;
-  background-image: url("../img/wood.jpg");
-  background-size: cover;
+
+  /* Main global styles */
+  color: #fff;
+
+  background-image: url("../img/bg.jpg");
   background-position: center;
-  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.title .container{
+
+.outer {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+.inner {
   display: table-cell;
   vertical-align: middle;
-  position: relative;
+  text-align: center;
 }
+
 .title h1{
-  color: #fff;
+  margin: 0px;
+  font-family: Anton, sans-serif;
 }
-.title i{
-  opacity: 0.5;
-  color: #fff;
-  padding-top: 20px;
-}
-
-/* img border */
-.img-circle{
-  border: 7px solid #333;
+.title h3{
+  font-family: Biryani;
+  margin: 0px;
 }
 
-/* ABOUT SECTION
-================================================================================
-*/
-.about{
-  text-align: center;
-}
-
-/* LINK SECTION
-================================================================================
-*/
 .link{
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 3em;
 }
 .link a{
-  color: #333;
+  color: #bebebe;
 }
 
-.fa-spin-slow {
--webkit-animation: fa-spin 6s infinite linear;
-animation: fa-spin 6s infinite linear;
+/*==================
+    Responsive css
+  ==================*/
+
+/* xs screens */
+@media screen and (max-width: 768px) {
+  .title h1{
+    font-size: 7em;
+  }
+  .title h3{
+    font-size: 1em;
+  }
+  .description {
+    font-size: 0.5em;
+  }
+}
+
+/* sm screens */
+@media screen and (min-width: 768px) {
+  .title h1{
+    font-size: 9em;
+  }
+  .title h3{
+    font-size: 2em;
+  }
+  .description {
+    font-size: 1.5em;
+  }
+}
+
+/* md screens */
+@media screen and (min-width: 992px) {
+  .title h1{
+    font-size: 12em;
+  }
+  .title h3{
+    font-size: 3em;
+  }
+  .description {
+    font-size: 2.5em;
+  }
+}
+
+/* lg screens */
+@media screen and (min-width: 1200px) {
+  .title h1{
+    font-size: 15em;
+  }
 }
