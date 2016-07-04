@@ -36,6 +36,23 @@ html,body {
   margin: 0px;
 }
 
+.info {
+  text-align: right;
+  display: none;
+  font-size: 1.5em;
+  font-family: Biryani;
+}
+
+.buttons {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  z-index: 99;
+}
+.close-button {
+  /* So the close button won't be visible when the page gets loaded */
+  display: none;
+}
 .link{
   /* Fixing the links to the bottom of the page. */
   position: fixed;
@@ -54,16 +71,29 @@ html,body {
     Responsive css
   ==================*/
 
-/* xs screens */
-@media screen and (max-width: 768px) {
+/* xxs screens */
+@media screen and (max-width: 480px) {
   .title h1{
     font-size: 8em;
   }
   .title h3{
     font-size: 1em;
   }
-  .description {
-    font-size: 0.5em;
+  .info {
+    font-size: 1.5em;
+  }
+
+}
+/* xs screens */
+@media screen and (min-width: 480px) {
+  .title h1{
+    font-size: 10em;
+  }
+  .title h3{
+    font-size: 1em;
+  }
+  .info {
+    font-size: 2em;
   }
 }
 
@@ -75,8 +105,8 @@ html,body {
   .title h3{
     font-size: 2em;
   }
-  .description {
-    font-size: 1.5em;
+  .info {
+    font-size: 2.5em;
   }
 }
 
@@ -88,8 +118,8 @@ html,body {
   .title h3{
     font-size: 3em;
   }
-  .description {
-    font-size: 2.5em;
+  .info {
+    font-size: 3em;
   }
 }
 
@@ -97,5 +127,8 @@ html,body {
 @media screen and (min-width: 1200px) {
   .title h1{
     font-size: 18em;
+  }
+  .info {
+    font-size: 3.2em;
   }
 }
