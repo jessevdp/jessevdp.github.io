@@ -48,6 +48,7 @@ html,body {
   top: 2em;
   right: 2em;
   z-index: 99;
+  cursor:pointer;
 }
 .close-button {
   /* So the close button won't be visible when the page gets loaded */
