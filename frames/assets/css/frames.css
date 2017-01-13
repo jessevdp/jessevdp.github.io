@@ -1,0 +1,287 @@
+
+/* =============================================================================
+ * main
+ * ============================================================================= */
+ body, html {
+   background-color: #232934;
+
+   /* Image */
+   /*background-image: url('../img/vnseeatt9w4-sven-scheuermeier.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;*/
+ }
+
+ /* =============================================================================
+  * frame-columns
+  * ============================================================================= */
+
+  /* Bootstrap xs */
+  @media (max-width: 768px) {
+    .frame-columns {
+      text-align: center; /* make sure the column is in the center */
+
+      -moz-column-count:1; /* Firefox */
+      -webkit-column-count:1; /* Chrome, Safari, Opera */
+      column-count: 1; /* The rest */
+    }
+  }
+
+/**
+ * Fix for 'too wide' frames
+ * (when 2 besides each other just won't fit but 1 taking up the enitre screen doesn't look good either)' */
+
+  @media (min-width: 500px) and (max-width: 768px) {
+    .frame {
+      max-width: 50%;
+    }
+  }
+
+/* Bootstrap sm */
+@media (min-width: 768px) {
+  .frame-columns {
+    /* Firefox */
+    -moz-column-count:2;
+    -moz-column-gap: 3%;
+    -moz-column-width: 48%;
+
+    /* Chrome, Safari, Opera */
+    -webkit-column-count:2;
+    -webkit-column-gap: 3%;
+    -webkit-column-width: 48%;
+
+    /* The rest */
+    column-count: 2;
+    column-gap: 3%;
+    column-width: 45%;
+  }
+}
+
+/* Bootstrap lg */
+@media (min-width: 1170px) {
+  .frame-columns {
+    /* Firefox */
+    -moz-column-count:3;
+    -moz-column-gap: 3%;
+    -moz-column-width: 30%;
+
+    /* Chrome, Safari, Opera */
+    -webkit-column-count:3;
+    -webkit-column-gap: 3%;
+    -webkit-column-width: 30%;
+
+    /* The rest */
+    column-count: 3;
+    column-gap: 3%;
+    column-width: 30%;
+  }
+}
+
+/* XL displays */
+@media (min-width: 1300px) {
+  .frame-columns {
+    /* Firefox */
+    -moz-column-count:4;
+    -moz-column-gap: 3%;
+    -moz-column-width: 25%;
+
+    /* Chrome, Safari, Opera */
+    -webkit-column-count:4;
+    -webkit-column-gap: 3%;
+    -webkit-column-width: 25%;
+
+    /* The rest */
+    column-count: 4;
+    column-gap: 3%;
+    column-width: 25%;
+  }
+}
+
+ /* =============================================================================
+  * frames
+  * ============================================================================= */
+ .frame {
+   border-bottom: 0.7rem solid #fff;
+   margin-top: 1rem !important;
+   margin-bottom: 1rem !important;
+
+   display: inline-block;
+   margin: auto; /* center them */
+
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+ }
+.frame .text {
+  text-align: left;
+  padding: 1rem;
+}
+.frame img {
+  display: block;
+  margin: auto;
+}
+
+/* restyle the basic button */
+.frame .btn {
+  color: #fff;
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+}
+.frame .btn:hover {
+  color: #000;
+  background-color: #ffffff;
+}
+
+/* -----------------------------------------------------------------------------
+ * Special classes
+ * ----------------------------------------------------------------------------- */
+
+/* move the accent to the top */
+ .top {
+   border-bottom: none !important; /* make sure it's not there */
+   border-top: 0.7rem solid;
+ }
+
+ /* -------------------------------------------- */
+
+ .invert {
+   border-bottom: 0.7rem solid #000;
+   background-color: rgba(255, 255, 255, 0.8);
+   color: #000;
+ }
+
+ /* invert the button */
+ .invert .btn {
+   color: #000;
+   border-color: #000;
+ }
+ .invert .btn:hover {
+   color: #fff;
+   background-color: #000;
+ }
+
+ /* -------------------------------------------- */
+
+/* Make the frame contain the image. */
+ .contain-image {
+   padding: 1rem;
+ }
+ .contain-image .text {
+   padding: 0;
+ }
+
+ /* -------------------------------------------- */
+
+/* Give the par a line on the left as accent. */
+ .par {
+   border-left: 0.7rem solid;
+   border-color: inherit;
+   padding-left: 1rem;
+ }
+
+/* =============================================================================
+ * accents
+ * ============================================================================= */
+
+ /* EMERALD */
+ .accent-emerald {
+   border-color: #2CC990;
+ }
+ .accent-emerald .btn:hover {
+   background-color: #2CC990;
+   border-color: #2CC990;
+ }
+ .accent-emerald p {
+   border-color: #2CC990;
+ }
+
+ /* GREEN */
+ .accent-green {
+   border-color: #0ac459;
+ }
+ .accent-green .btn:hover {
+   background-color: #0ac459;
+   border-color: #0ac459;
+ }
+ .accent-green p {
+   border-color: #0ac459;
+ }
+
+ /* YELLOW */
+ .accent-yellow {
+   border-color: #EEE657;
+ }
+ .accent-yellow .btn:hover {
+   background-color: #EEE657;
+   border-color: #EEE657;
+ }
+ .accent-yellow p {
+   border-color: #EEE657;
+ }
+
+ /* RED */
+ .accent-red {
+   border-color: #E22211;
+ }
+ .accent-red .btn:hover {
+   background-color: #E22211;
+   border-color: #E22211;
+ }
+ .accent-red p {
+   border-color: #E22211;
+ }
+
+ /* ORANGE */
+ .accent-orange {
+   border-color: #FD5B03;
+ }
+ .accent-orange .btn:hover {
+   background-color: #FD5B03;
+   border-color: #FD5B03;
+ }
+ .accent-orange p {
+   border-color: #FD5B03;
+ }
+
+ /* PURPLE */
+ .accent-purple {
+   border-color: #8870FF;
+ }
+ .accent-purple .btn:hover {
+   background-color: #8870FF;
+   border-color: #8870FF;
+ }
+ .accent-purple p {
+   border-color: #8870FF;
+ }
+
+ /* BLUE */
+ .accent-blue {
+   border-color: #2C82C9;
+ }
+ .accent-blue .btn:hover {
+   background-color: #2C82C9;
+   border-color: #2C82C9;
+ }
+ .accent-blue p {
+   border-color: #2C82C9;
+ }
+
+ /* PINK */
+ .accent-pink {
+   border-color: #ff00f5;
+ }
+ .accent-pink .btn:hover {
+   background-color: #ff00f5;
+   border-color: #ff00f5;
+ }
+ .accent-pink p {
+   border-color: #ff00f5;
+ }
+
+
+/*
+.accent- {
+  border-color: ;
+}
+*/
