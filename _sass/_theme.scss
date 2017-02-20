@@ -1,0 +1,70 @@
+/*!
+ * This file contains all the scss related to the theme of the site.
+ */
+
+ html, body {
+   background-color: #fff;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+ }
+
+/* classes used for positioning elements. */
+ .wrapper {
+   height: 100%;
+   width: 100%;
+   position: relative;
+ }
+ .vertical-align {
+   position: absolute;
+   transform: translateY(-50%);
+ }
+ .horizontal-center {
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin: auto
+ }
+
+
+/* Header theme */
+ .top {
+   position: absolute;
+
+   height: 100%;
+   width: 100%;
+
+   background-image: url('../img/background.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+ .header {
+   .line {
+     width: 100%;
+     background-color: $main-color;
+   }
+ }
+
+/* Content theme */
+ .content {
+   position: absolute;
+   width: 100%;
+   background-color: #fff;
+
+   padding-bottom: 1rem;
+
+   /* Content heading */
+   .heading {
+     text-align: center;
+     h1 {
+       font-family: 'Roboto', sans-serif;
+     }
+     p {
+       font-family: 'Roboto Mono', monospace;
+     }
+   }
+   .card {
+     margin-bottom: 1rem;
+   }
+ }

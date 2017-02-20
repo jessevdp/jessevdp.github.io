@@ -1,0 +1,98 @@
+/*!
+ * This file contains all the scss related to the scaling of the site.
+ */
+ .vertical-align {
+   // extra small outside of the media queries.
+   top: $header-hight-xs;
+
+   @media #{$mq-small} {
+     top: $header-hight-sm;
+   }
+   @media #{$mq-medium} {
+     top: $header-hight-md;
+   }
+   @media #{$mq-large} {
+     top: $header-hight-lg;
+   }
+ }
+
+.top {
+  // extra small outside of the media queries.
+  bottom: 100% - $header-hight-xs;
+
+  @media #{$mq-small} {
+    bottom: 100% - $header-hight-sm;
+  }
+  @media #{$mq-medium} {
+    bottom: 100% - $header-hight-md;
+  }
+  @media #{$mq-large} {
+    bottom: 100% - $header-hight-lg;
+  }
+}
+
+.header {
+  // extra small outside of the media queries.
+  img {
+    width: 50%;
+    border: $line-height-xs solid $main-color;
+
+    @media #{$mq-xsmall} {
+      width: 40%;
+      border: $line-height-sm solid $main-color;
+    }
+    @media #{$mq-small} {
+      width: 30%;
+      border: $line-height-sm solid $main-color;
+    }
+    @media #{$mq-medium} {
+      width: 20%;
+      border: $line-height-md solid $main-color;
+    }
+    @media #{$mq-large} {
+      width: 20%;
+      border: $line-height-lg solid $main-color;
+    }
+  }
+  .line {
+    height: $line-height-xs;
+    @media #{$mq-small} { height: $line-height-sm; }
+    @media #{$mq-medium} { height: $line-height-md; }
+    @media #{$mq-large} { height: $line-height-lg; }
+  }
+}
+
+.content {
+  // extra small outside of the media queries.
+  top: $header-hight-xs;
+  padding-top: 25%;
+  .heading {
+    h1 { font-size: 2rem; }
+    p { font-size: 0.6rem; }
+  }
+
+  @media #{$mq-small} {
+    top: $header-hight-sm;
+    padding-top: 20%;
+    .heading {
+      h1 { font-size: 3.5rem; }
+      p { font-size: 0.8rem; }
+    }
+  }
+  @media #{$mq-medium} {
+    top: $header-hight-md;
+    padding-top: 10%;
+    .heading {
+      h1 { font-size: 4rem; }
+      p { font-size: 1rem; }
+    }
+  }
+  @media #{$mq-large} {
+    top: $header-hight-lg;
+    padding-top: 10%;
+    .heading {
+      h1 { font-size: 5rem; }
+      p { font-size: 1.5rem; }
+    }
+  }
+}
