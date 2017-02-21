@@ -2,7 +2,7 @@
 # Main SCSS file.
 ---
 // Our accent color.
-$main-color: #454545;
+$main-color: #2a2c2d;
 
 // Breakpoints
 $bp-xsmall: 32em; // 513px
@@ -28,10 +28,10 @@ $header-hight-sm: 25%;
 $header-hight-md: 40%;
 $header-hight-lg: 50%;
 
-$line-height-xs: 0.5rem;
-$line-height-sm: 0.5rem;
-$line-height-md: 0.8rem;
-$line-height-lg: 1rem;
+$line-height-xs: 0.8rem;
+$line-height-sm: 0.8rem;
+$line-height-md: 1rem;
+$line-height-lg: 1.5rem;
 
 // Imports
 @import "theme";
