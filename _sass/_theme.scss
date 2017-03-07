@@ -9,10 +9,6 @@
    margin: 0;
  }
 
-.fa {
-   color: #000;
- }
-
 /* classes used for positioning elements. */
  .wrapper {
    height: 100%;
@@ -76,4 +72,8 @@
      background-color: $main-color;
      color: #fff;
    }
+   /* make sure all the icons are black */
+   .fa {
+      color: #000;
+    }
  }
