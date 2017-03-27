@@ -1,0 +1,44 @@
+/**
+ * Loader animation #4 classes and keyframes.
+ */
+.loader-4 {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  background: $dark-color;
+
+  &:before, &:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50%;
+    margin-left: -50%;
+
+    background: $accent-color;
+
+    opacity: 0;
+    animation: pulse 2s linear infinite;
+  }
+
+  &:after {
+    animation: pulse 1.5s linear 1s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

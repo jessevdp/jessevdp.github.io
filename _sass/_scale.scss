@@ -1,98 +1,94 @@
-/*!
- * This file contains all the scss related to the scaling of the site.
+/**
+ * This file contains the scss related to the scaling of the website across different viewports.
  */
- .vertical-align {
-   // extra small outside of the media queries.
-   top: $header-hight-xs;
 
+.header-top {
+  @media #{$mq-small} {
+    background-attachment: fixed;
+  }
+}
+
+ .header-img {
+   top: $header-height-xs;
+   img {
+     width: 50%;
+     margin-left: -25%;
+   }
    @media #{$mq-small} {
-     top: $header-hight-sm;
+     top: $header-height-sm;
+     img {
+       width: 35%;
+       margin-left: -17.5%;
+     }
    }
    @media #{$mq-medium} {
-     top: $header-hight-md;
+     top: $header-height-md;
+     img {
+       width: 20%;
+       margin-left: -10%;
+     }
    }
    @media #{$mq-large} {
-     top: $header-hight-lg;
+     top: $header-height-lg;
+     img {
+       width: 15%;
+       margin-left: -7.5%;
+     }
    }
  }
 
-.top {
-  // extra small outside of the media queries.
-  bottom: 100% - $header-hight-xs;
+ .content {
+   top: $header-height-xs;
+   padding-top: 30%;
 
-  @media #{$mq-small} {
-    bottom: 100% - $header-hight-sm;
-  }
-  @media #{$mq-medium} {
-    bottom: 100% - $header-hight-md;
-  }
-  @media #{$mq-large} {
-    bottom: 100% - $header-hight-lg;
-  }
-}
+   .heading {
+     h1 {
+       font-size: 2rem;
+       @media #{$mq-max-xsmall} {
+         font-size: 1.8rem;
+       }
+     }
+     p {
+       font-size: .8rem;
+     }
+   }
 
-.header {
-  // extra small outside of the media queries.
-  img {
-    width: 50%;
-    border: $line-height-xs solid $main-color;
+   @media #{$mq-small} {
+     top: $header-height-sm;
+     padding-top: 20%;
+     .heading {
+       h1 {
+         font-size: 3rem;
+       }
+       p {
+         font-size: 1rem;
+       }
+     }
+   }
+   @media #{$mq-medium} {
+     top: $header-height-md;
+     padding-top: 12%;
 
-    @media #{$mq-xsmall} {
-      width: 40%;
-      border: $line-height-sm solid $main-color;
-    }
-    @media #{$mq-small} {
-      width: 30%;
-      border: $line-height-sm solid $main-color;
-    }
-    @media #{$mq-medium} {
-      width: 20%;
-      border: $line-height-md solid $main-color;
-    }
-    @media #{$mq-large} {
-      width: 20%;
-      border: $line-height-lg solid $main-color;
-    }
-  }
-  .line {
-    height: $line-height-xs;
-    @media #{$mq-small} { height: $line-height-sm; }
-    @media #{$mq-medium} { height: $line-height-md; }
-    @media #{$mq-large} { height: $line-height-lg; }
-  }
-}
+     .heading h1 {
+       font-size: 3.5rem;
+     }
+   }
+   @media #{$mq-large} {
+     top: $header-height-lg;
+     padding-top: 10%;
 
-.content {
-  // extra small outside of the media queries.
-  top: $header-hight-xs;
-  padding-top: 25%;
-  .heading {
-    h1 { font-size: 2rem; }
-    p { font-size: 0.8rem; }
-  }
+     .heading h1 {
+       font-size: 4rem;
+     }
+   }
+ }
 
-  @media #{$mq-small} {
-    top: $header-hight-sm;
-    padding-top: 20%;
-    .heading {
-      h1 { font-size: 3.5rem; }
-      p { font-size: 1rem; }
-    }
-  }
-  @media #{$mq-medium} {
-    top: $header-hight-md;
-    padding-top: 10%;
-    .heading {
-      h1 { font-size: 4rem; }
-      p { font-size: 1.2rem; }
-    }
-  }
-  @media #{$mq-large} {
-    top: $header-hight-lg;
-    padding-top: 10%;
-    .heading {
-      h1 { font-size: 5rem; }
-      p { font-size: 1.5rem; }
-    }
-  }
-}
+ .skills i {
+   font-size: 2rem;
+   @media #{$mq-small} {
+     font-size: 3rem;
+   }
+   @media #{$mq-medium} {
+     font-size: 4rem;
+   }
+ }

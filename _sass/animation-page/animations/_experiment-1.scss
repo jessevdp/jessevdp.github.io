@@ -1,0 +1,41 @@
+/**
+ * Experiment animation #1 classes and keyframes.
+ */
+
+.experiment-1 {
+  height: 100px;
+  width: 100px;
+  background: $dark-color;
+
+  animation: experiment-reverse .6s forwards;
+
+  &:hover {
+    animation: experiment .4s forwards;
+  }
+}
+
+@keyframes experiment {
+  0% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0px 20px 10px -10px rgba(0,0,0,0.4);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes experiment-reverse {
+  0% {
+    box-shadow: 0px 20px 10px -10px rgba(0,0,0,0.4);
+    transform: scale(1.1);
+  }
+  60% {
+    box-shadow: none;
+    transform: scale(.9);
+  }
+  100% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+}

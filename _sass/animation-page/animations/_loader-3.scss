@@ -1,0 +1,61 @@
+/**
+ * Loader animation #3 classes and keyframes.
+ */
+
+.loader-3 {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+
+  background: $dark-color;
+
+  animation: spin 2s linear infinite;
+
+  &:before, &:after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+
+    height: 20%;
+    width: 20%;
+    background: $accent-color;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    margin-left: -10%;
+    animation: bounce-1 .5s ease-in infinite;
+  }
+
+  &:after {
+    top: auto;
+    bottom: -10%;
+    animation: bounce-2 .5s ease-in infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-175%);
+  }
+}
+
+@keyframes bounce-2 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(175%);
+  }
+}

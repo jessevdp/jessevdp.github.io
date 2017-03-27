@@ -1,0 +1,153 @@
+/**
+ * This file contains the scss related to the theme of the website.
+ */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding-top: .5rem;
+  overflow-x: hidden;
+
+  background: $dark-color;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem 1rem;
+  color: $accent-color-dark;
+  background-color: $light-color;
+  box-shadow: #{$shadow};
+
+  /* Page loading animation */
+  opacity: 0;
+  animation: show 400ms ease-in forwards;
+  transform-origin: top left;
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+
+    &:after {
+      display: block;
+      content: '';
+      margin: auto;
+      width: 7rem;
+      height: .3rem;
+      margin-top: .5rem;
+      background: $accent-color;
+    }
+  }
+}
+
+.group {
+  margin: 2rem 0;
+  background: $accent-color-dark;
+  box-shadow: #{$shadow};
+
+  /* Page loading animation */
+  opacity: 0;
+  animation: show 400ms 300ms ease-in forwards;
+  transform-origin: top left;
+
+  .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .group-header {
+    padding: 1rem;
+    padding-bottom: 0rem;
+    text-align: center;
+    color: $accent-color-dark;
+    background-color: $light-color;
+    border-bottom: .35rem solid $accent-color;
+
+    h2 {
+      font-family: 'Roboto', sans-serif;
+
+      &:after {
+        display: block;
+        content: '';
+        margin: auto;
+        width: 6rem;
+        height: .3rem;
+        margin-top: .5rem;
+        background: $accent-color;
+      }
+    }
+  }
+}
+
+.thumbnail {
+  margin: 1rem 0;
+
+  /* Page loading animation */
+  opacity: 0;
+  animation: show 400ms 600ms ease-in forwards;
+  transform-origin: bottom center;
+
+  .content {
+    min-height: 200px;
+    position: relative;
+
+    border-bottom: .35rem solid $accent-color;
+
+    // Scale the thumbnail on hover
+    transition: transform .3s ease-in-out;
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    background: $light-color;
+    box-shadow: #{$shadow};
+
+    .animation-wrapper {
+      height: fit-content;
+      width: fit-content;
+
+      // Center within parent
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .number {
+      font-weight: bold;
+      font-size: 1.4rem;
+      position: absolute;
+      bottom: .5rem;
+      right: .9rem;
+      color: $accent-color-dark;
+    }
+  }
+}
+
+/**
+ * Keyframes for appending items to the page. */
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes show-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

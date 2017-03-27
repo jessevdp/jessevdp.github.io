@@ -1,80 +1,140 @@
-/*!
- * This file contains all the scss related to the theme of the site.
+/**
+ * This file contains the scss related to the theme of the website.
  */
 
- html, body {
-   background-color: #fff;
-   height: 100%;
-   width: 100%;
-   margin: 0;
- }
+html, body {
+  height: 100%;
+  background: $dark-color;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
 
-/* classes used for positioning elements. */
- .wrapper {
-   height: 100%;
-   width: 100%;
-   position: relative;
- }
- .vertical-align {
-   position: absolute;
-   transform: translateY(-50%);
- }
- .horizontal-center {
-   position: absolute;
-   left: 0;
-   right: 0;
-   margin: auto
- }
+  .header-top {
+    width: 100%;
+    position: absolute;
 
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
-/* Header theme */
- .top {
-   position: absolute;
-
-   height: 100%;
-   width: 100%;
-
-   background-image: url('../img/background.jpg');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
- }
- .header {
-   .line {
-     width: 100%;
-     background-color: $main-color;
-   }
- }
-
-/* Content theme */
- .content {
-   position: absolute;
-   width: 100%;
-   background-color: #fff;
-
-   padding-bottom: 1rem;
-
-   /* Content heading */
-   .heading {
-     text-align: center;
-     h1 {
-       font-family: 'Roboto', sans-serif;
-       color: $main-color;
-     }
-     p {
-       font-family: 'Roboto Mono', monospace;
-     }
-   }
-   .card {
-     margin-bottom: 1rem;
-     border-color: $main-color;
-   }
-   .card-header {
-     background-color: $main-color;
-     color: #fff;
-   }
-   /* make sure all the icons are black */
-   .fa {
-      color: #000;
+    border-bottom: $line-height solid $accent-color;
+  }
+  .header-img {
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    img {
+      position: relative;
+      left: 50%;
+      box-shadow: #{$shadow};
     }
- }
+  }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+
+  .heading {
+    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+
+    color: $dark-color;
+    background: $light-color;
+    box-shadow: #{$shadow};
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    h1 {
+      padding-bottom: 1.2rem;
+      font-weight: 100;
+
+      // Line underneath the heading
+      &:after {
+        display: block;
+        content: '';
+        position: relative;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 25%;
+        border-bottom: $line-height solid $accent-color;
+      }
+    }
+  }
+
+  .section {
+    box-shadow: #{$shadow};
+    margin: 1rem 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+
+    .section-header {
+      * {
+        font-weight: 300;
+      }
+
+      text-align: center;
+      padding: 1rem;
+
+      background-color: $dark-accent-color;
+      color: $accent-color;
+      border-bottom: $line-height solid $accent-color;
+    }
+    .section-content {
+      background: $light-color;
+      padding: 1.2rem;
+    }
+
+    &.info {
+      .section-content {
+
+        a {
+          color: inherit;
+        }
+
+        .pair {
+          display: flex;
+          align-items: center;
+          padding: .3rem 0;
+
+          .icon {
+            width: 20%;
+            text-align: center;
+          }
+          .text {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    &.story {
+      .par {
+        padding-left: 1rem;
+        border-left: $line-height solid $accent-color;
+        margin-bottom: 1.5rem;
+      }
+      a {
+        color: $accent-color;
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        i {
+          padding: .5rem 1rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
