@@ -4,7 +4,6 @@
 
 html, body {
   height: 100%;
-  background: $dark-color;
 }
 .wrapper {
   height: 100%;
@@ -23,6 +22,7 @@ html, body {
     border-bottom: $line-height solid $accent-color;
   }
   .header-img {
+    z-index: 5;
     position: absolute;
     width: 100%;
     transform: translateY(-50%);
@@ -35,8 +35,12 @@ html, body {
 }
 
 .content {
-  position: absolute;
   width: 100%;
+  position: absolute;
+  background: $dark-color;
+
+  margin-bottom: $footer-height;
+  border-bottom: $line-height solid $accent-color;
 
   .heading {
     padding: 2rem 1rem;
@@ -137,4 +141,17 @@ html, body {
       }
     }
   }
+}
+
+.footer {
+  width: 100%;
+  height: $footer-height;
+  background-color: $light-color;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

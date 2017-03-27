@@ -92,3 +92,10 @@
      font-size: 4rem;
    }
  }
+
+ .footer {
+   font-size: .8rem;
+   @media #{$mq-small} {
+     font-size: 1rem;
+   }
+ }

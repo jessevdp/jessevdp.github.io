@@ -155,6 +155,12 @@
         </div> <!-- /container -->
       </div> <!-- /content -->
 
+      <div class="footer">
+        <p>
+          Copyright &copy <span class="footer-year"></span> <strong>Jesse van der Pluijm</strong>
+        </p>
+      </div>
+
     </div> <!-- /wrapper -->
 
     <!-- Core JavaScript
@@ -165,6 +171,12 @@
     <script src="./assets/js/bootstrap.min.js" charset="utf-8"></script>
     <!-- custom JS -->
     <script src="./assets/js/app.js" charset="utf-8"></script>
+
+    <!-- Script used for setting the year in the copyright footer. -->
+    <script type="text/javascript">
+      var d = new Date()
+      $('.footer-year').html(d.getFullYear())
+    </script>
 
   </body>
 </html>
