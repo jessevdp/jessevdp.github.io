@@ -1,9 +1,11 @@
+.derp
+  margin-top: 300px
+  height: 300px
+  background-color: red
 nav
-  // Temp black bg
-  //background-color: #000
 
   .mobile-nav
-    position: absolute
+    position: fixed
     top: 0
     bottom: 0
     left: 0
@@ -36,10 +38,17 @@ nav
     transition: all 300ms
 
   .wrapper
-    position: relative
+    transition: background-color 300ms
+
     z-index: 1
-    color: #fff
+    position: absolute
+    top: 0
+
+    width: 100%
     padding: 2rem 4rem
+    box-sizing: border-box
+
+    color: #fff
 
     display: flex
     align-items: center
@@ -98,6 +107,8 @@ nav
         background-color: #fff
 
   &.dark
+    .wrapper
+      background-color: #fff
     main a
       color: transparentize(#000, .5)
       &:hover
@@ -116,6 +127,8 @@ nav
   nav
     .wrapper
       padding: 1rem
+      position: fixed
+
       .brand svg
         width: 3rem
       .menu-button
@@ -148,3 +161,6 @@ nav
 
       .mobile-nav
         transform: scale(1)
+
+      .wrapper
+        background-color: $color-main
