@@ -1,0 +1,87 @@
+nav
+  // Temp black bg
+  background-color: #000
+
+  color: #fff
+  padding: 2rem 4rem
+
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  .brand
+    svg
+      width: 4rem
+      .letter
+        fill-rule: evenodd
+
+  main
+    +mediaQ('max-md')
+      display: none
+    a
+      text-decoration: none
+      text-transform: uppercase
+      margin: 0 1rem
+
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+
+  .menu-button
+    +mediaQ('md')
+      display: none
+
+    width: 2rem
+    background-color: red
+    position: relative
+
+    &:before, &:after
+      display: block
+      content: ''
+      height: .2rem
+      width: 100%
+
+      background-color: #fff
+      position: absolute
+
+      transition: all 300ms
+
+  .menu-button[data-expanded=false]
+    &:before
+      margin-top: -.5rem
+    &:after
+      margin-top: .5rem
+
+  .menu-button[data-expanded=true]
+    &:before
+      margin-top: 0rem
+      transform: rotate(45deg)
+    &:after
+      margin-top: 0rem
+      transform: rotate(-45deg)
+
+
+
+  // dark/light mode styles
+  &.light
+    main a
+      color: transparentize(#fff, .2)
+      &:hover
+        color: #fff
+    svg
+      .background
+        fill: #fff
+      .letter
+        fill: #000
+
+  &.dark
+    main a
+      color: transparentize(#000, .5)
+      &:hover
+        color: #000
+    svg
+      .background
+        fill: #000
+      .letter
+        fill: #fff

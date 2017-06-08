@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500')
+
 body
-  min-height: 100vh
-  background-color: $color-main
+  font-family: 'Roboto', sans-serif
+
+
+=mediaQ($query)
+  $bp-sm: 576px
+  $bp-md: 768px
+  $bp-lg: 992px
+  $bp-xl: 1200px
+
+  @if $query == 'sm'
+    @media (min-width: #{$bp-sm})
+      @content
+  @else if $query == 'md'
+    @media (min-width: #{$bp-md})
+      @content
+  @else if $query == 'lg'
+    @media (min-width: #{$bp-lg})
+      @content
+  @else if $query == 'xl'
+    @media (min-width: #{$bp-md})
+      @content
+  @else if $query == 'max-sm'
+    @media (max-width: #{$bp-sm})
+      @content
+  @else if $query == 'max-md'
+    @media (max-width: #{$bp-md})
+      @content
+  @else if $query == 'max-lg'
+    @media (max-width: #{$bp-lg})
+      @content
+  @else if $query == 'max-xl'
+    @media (max-width: #{$bp-xl})
+      @content
+  @else
+    @media (#{$query})
+      @content
