@@ -13,3 +13,33 @@ layout: default
   </main>
   <i class="ion-ios-arrow-dropdown"></i>
 </header>
+
+<section id="portfolio">
+  <header>
+    <h2>I Create Delight.</h2>
+    <p>
+      Take a look at my portfolio below to see what I've got.
+    </p>
+  </header>
+
+  <main>
+    {% for i in (1..4) %}
+    <a href="#" class="item">
+      <div class="image" style="background-image: url('https://source.unsplash.com/random')"></div>
+
+      <div class="details">
+        <h3>Title Goes Here</h3>
+        <div class="tags">
+          <div class="tag"><i class="ion-md-pricetag"></i>Programming</div>
+          <div class="tag"><i class="ion-md-pricetag"></i>Design</div>
+        </div>
+      </div>
+
+    </article>
+    {% endfor %}
+  </main>
+
+  <div class="cta">
+    <a class="cta"href="{{ site.baseurl }}/work">view all projects</a>
+  </div>
+</section>

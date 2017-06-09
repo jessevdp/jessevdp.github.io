@@ -23,6 +23,7 @@ nav
         &:last-child
           padding-bottom: 0
         a
+          font-weight: 500
           text-decoration: none
           text-transform: uppercase
 
@@ -60,6 +61,7 @@ nav
 
     main
       a
+        font-weight: 500
         text-decoration: none
         text-transform: uppercase
         margin: 0 1rem
@@ -90,9 +92,9 @@ nav
   // dark/light mode styles
   &.light
     main a
-      color: transparentize(#fff, .2)
+      color: $text-color-light-secondary
       &:hover
-        color: #fff
+        color: $text-color-light
     svg
       .background
         fill: #fff

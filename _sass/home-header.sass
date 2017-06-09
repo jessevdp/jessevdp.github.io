@@ -28,7 +28,7 @@ header.home
     left: 50%
     transform: translateX(-50%)
     font-size: 2em
-    color: #fff
+    color: $text-color-light
 
     +mediaQ('md')
       font-size: 3em
@@ -42,12 +42,13 @@ header.home
     h1
       font-size: 2.5rem
     h3, h1
+      margin: 1rem 0
       max-width: 500px
-      color: rgba(#fff, .8)
+      color: $text-color-light-secondary
       font-weight: 300
       span
         font-style: italic
-        color: #fff
+        color: $text-color-light
         font-weight: 500
 
     +mediaQ('md')
