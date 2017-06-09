@@ -1,0 +1,69 @@
+section#portfolio
+  background-color: $color-dark
+  text-align: center
+  color: $text-color-light
+
+  header
+    padding: $vertical-spacer-small $side-spacing-small
+    +mediaQ('md')
+      padding: $vertical-spacer $side-spacing
+    p
+      margin: 0 auto
+      width: 60vw
+      max-width: 350px
+  div.cta
+    padding: $vertical-spacer-small $side-spacing-small
+  main
+    display: flex
+    flex-wrap: wrap
+    a.item
+      overflow: hidden
+      position: relative
+      width: 100vw
+
+      .image
+        display: block
+        height: 300px
+        width: 100%
+        background:
+          size: cover
+          position: center
+      .details
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: rgba(black, .8)
+        opacity: 0
+        transition: all 300ms
+        h3
+          color: $text-color-light
+          font-size: 2rem
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+        .tags
+          position: absolute
+          bottom: 1rem
+          left: 1rem
+          .tag
+            font-size: .8rem
+            display: inline-block
+            padding: .3rem
+            background-color: #fff
+            color: #000
+            border-radius: .3rem
+            text-decoration: none
+            i
+              margin-right: .3rem
+      &:hover
+        .details
+          opacity: 1
+
+      +mediaQ('sm')
+        .image
+          height: 400px
+      +mediaQ('md')
+        width: 50vw

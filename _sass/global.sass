@@ -2,38 +2,36 @@
 
 body
   font-family: 'Roboto', sans-serif
+  font-weight: 300
 
+h2
+  margin-bottom: 2rem
+  font-weight: 500
+  font-size: 2rem
+  font-style: italic
+  +mediaQ('md')
+    font-size: 2.5rem
+    margin-bottom: 3rem
+p
+  font-weight: 300
+  +mediaQ('md')
+    font-size: 1.3rem
 
-=mediaQ($query)
-  $bp-sm: 576px
-  $bp-md: 768px
-  $bp-lg: 992px
-  $bp-xl: 1200px
+a.cta
+  position: relative
+  padding: 1rem 2rem
+  color: $text-color-light
+  background-color: $color-main
+  border-radius: 3px
+  font-weight: 500
+  text-transform: uppercase
+  text-decoration: none
 
-  @if $query == 'sm'
-    @media (min-width: #{$bp-sm})
-      @content
-  @else if $query == 'md'
-    @media (min-width: #{$bp-md})
-      @content
-  @else if $query == 'lg'
-    @media (min-width: #{$bp-lg})
-      @content
-  @else if $query == 'xl'
-    @media (min-width: #{$bp-md})
-      @content
-  @else if $query == 'max-sm'
-    @media (max-width: #{$bp-sm})
-      @content
-  @else if $query == 'max-md'
-    @media (max-width: #{$bp-md})
-      @content
-  @else if $query == 'max-lg'
-    @media (max-width: #{$bp-lg})
-      @content
-  @else if $query == 'max-xl'
-    @media (max-width: #{$bp-xl})
-      @content
-  @else
-    @media (#{$query})
-      @content
+  transition: all 200ms
+
+  top: 0px
+  left: 0px
+  &:hover
+    box-shadow: 2px 2px 0px #111, 4px 4px 0px $color-main
+    top: -4px
+    left: -4px

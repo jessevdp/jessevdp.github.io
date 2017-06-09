@@ -1,5 +1,45 @@
 $color-main: #1abc9c
 $color-dark: #111
 
+$text-color-light: #fff
+$text-color-light-secondary: rgba($text-color-light, .8)
+
 $side-spacing: 4rem
 $side-spacing-small: 1rem
+
+$vertical-spacer: 12rem
+$vertical-spacer-small: 8rem
+
+=mediaQ($query)
+  $bp-sm: 576px
+  $bp-md: 768px
+  $bp-lg: 992px
+  $bp-xl: 1200px
+
+  @if $query == 'sm'
+    @media (min-width: #{$bp-sm})
+      @content
+  @else if $query == 'md'
+    @media (min-width: #{$bp-md})
+      @content
+  @else if $query == 'lg'
+    @media (min-width: #{$bp-lg})
+      @content
+  @else if $query == 'xl'
+    @media (min-width: #{$bp-md})
+      @content
+  @else if $query == 'max-sm'
+    @media (max-width: #{$bp-sm})
+      @content
+  @else if $query == 'max-md'
+    @media (max-width: #{$bp-md})
+      @content
+  @else if $query == 'max-lg'
+    @media (max-width: #{$bp-lg})
+      @content
+  @else if $query == 'max-xl'
+    @media (max-width: #{$bp-xl})
+      @content
+  @else
+    @media (#{$query})
+      @content
