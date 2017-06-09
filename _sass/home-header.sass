@@ -1,0 +1,59 @@
+header.home
+  height: 100vh
+  width: 100vw
+  background: $color-dark
+
+  position: relative
+
+  .background
+    height: 100%
+    width: 100%
+    background:
+      image: url('/assets/global/wood.jpg')
+      size: cover
+      position: center
+
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      background-image: linear-gradient(180deg,rgba(#111, .6),#111)
+  i
+    position: absolute
+    bottom: 1em
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 2em
+    color: #fff
+
+    +mediaQ('md')
+      font-size: 3em
+
+
+  main
+    position: absolute
+    bottom: 15%
+    padding: 0 $side-spacing-small
+
+    h1
+      font-size: 2.5rem
+    h3, h1
+      max-width: 500px
+      color: rgba(#fff, .8)
+      font-weight: 300
+      span
+        font-style: italic
+        color: #fff
+        font-weight: 500
+
+    +mediaQ('md')
+      padding: 0 $side-spacing
+      bottom: 20%
+      h1
+        font-size: 3rem
+      h3
+        font-size: 1.5rem
