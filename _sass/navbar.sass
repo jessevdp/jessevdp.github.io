@@ -1,6 +1,7 @@
 nav
-
   .mobile-nav
+    z-index: 1
+
     position: fixed
     top: 0
     bottom: 0
@@ -36,12 +37,12 @@ nav
   .wrapper
     transition: background-color 300ms
 
-    z-index: 1
+    z-index: 2
     position: absolute
     top: 0
 
     width: 100%
-    padding: 2rem 4rem
+    padding: 2rem $side-spacing
     box-sizing: border-box
 
     color: #fff
@@ -103,8 +104,6 @@ nav
         background-color: #fff
 
   &.dark
-    .wrapper
-      background-color: #fff
     main a
       color: transparentize(#000, .5)
       &:hover
@@ -121,8 +120,11 @@ nav
 
 +mediaQ('max-md')
   nav
+    &.dark .wrapper
+      background-color: #fff
+
     .wrapper
-      padding: 1rem
+      padding: 1rem $side-spacing-small
       position: fixed
 
       .brand svg
