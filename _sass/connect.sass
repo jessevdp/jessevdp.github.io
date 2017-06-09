@@ -1,0 +1,57 @@
+section#connect
+  background-color: #fff
+
+  padding: $vertical-spacer $side-spacing
+
+  h2
+    text-align: center
+    margin-bottom: $vertical-spacer
+
+  .links
+    max-width: $max-width
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    a
+      height: 4rem
+      width: 4rem
+      border-radius: 50% //$border-radius
+      background-color: #000
+      color: #fff
+      position: relative
+      i
+        font-size: 2rem
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+      &.special
+        height: 6rem
+        width: 6rem
+        background-color: $color-main
+        i
+          font-size: 4rem
+  .arrow
+    position: relative
+    height: $vertical-spacer
+    //overflow: hidden
+    &:before, &:after
+      top: 100%
+      left: 50%
+      border: solid transparent
+      content: ''
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+    &:after
+      border-color: rgba(255, 255, 255, 0)
+      border-top-color: #fff
+      border-width: 200px
+      margin-left: -200px
+    &:before
+      border-color: rgba(0, 0, 0, 0)
+      border-top-color: #000
+      border-width: 201px
+      margin-left: -201px
