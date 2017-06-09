@@ -38,12 +38,12 @@ header.home
     position: absolute
     bottom: 15%
     padding: 0 $side-spacing-small
+    max-width: $max-width
 
     h1
       font-size: 2.5rem
     h3, h1
       margin: 1rem 0
-      max-width: 500px
       color: $text-color-light-secondary
       font-weight: 300
       span
@@ -53,8 +53,12 @@ header.home
 
     +mediaQ('md')
       padding: 0 $side-spacing
-      bottom: 20%
+      bottom: 25%
+      left: 50%
+      transform: translateX(-50%)
       h1
         font-size: 3rem
+        text-align: center
       h3
         font-size: 1.5rem
+        text-align: center
