@@ -3,6 +3,12 @@ owner: ""
 keywords: ""
 description: ""
 
+links:
+  instagram: "https://www.instagram.com/skillzzjesse/"
+  twitter: "https://twitter.com/skillzzjesse"
+  github: "https://github.com/jessevdp"
+  linkedin: "https://linkedin.com/in/jessevdp"
+
 exclude: ["CNAME", "README"]
 timezone: "Europe/Amsterdam"
 
