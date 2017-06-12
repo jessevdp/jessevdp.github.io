@@ -35,16 +35,18 @@ section#about
       padding: $vertical-spacer-small $side-spacing-small
       padding-top: 3rem
       width: 100vw
+      max-width: $max-width
+      margin: 0 auto
       box-sizing: border-box
 
     .image
       width: 100vw
-      height: 400px
+      height: 300px
       background:
         size: cover
         position: center
 
-  +mediaQ('md')
+  +mediaQ('lg')
     header
       padding: $vertical-spacer $side-spacing
 
