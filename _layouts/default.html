@@ -4,7 +4,12 @@
     {% include head.html %}
   </head>
   <body>
+    {% include navbar.html style="light" %}
+
     {{ content }}
+
+    {% include footer.html %}
+
   </body>
   {% include scripts.html %}
 </html>
