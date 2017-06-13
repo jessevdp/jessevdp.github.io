@@ -7,6 +7,29 @@ $('nav').on('click', '.menu-button', function () {
   value = !value // Invert value
 
   $('nav.top').attr('data-expanded', value)
+  $.scrollLock(value)
+})
+
+// MAKE SURE YOU CAN SCROLL ON THE LG VERSION OF THE NAVBAR
+// When you toggle your browser size while the mobile nav is
+// active we want to make sure to disable the scroll lock (if
+// the browser get's bigger -> desktop navbar)
+// To save us from major confusion later on.
+$(window).resize(function () {
+  var width = $(window).width()
+
+  var expanded = $('nav.top').attr('data-expanded')
+  // Convert string to Boolean
+  if (expanded === 'true') expanded = true
+  if (expanded === 'false') expanded = false
+
+  // THE TWO CURRENT BREAKPOINTS FOR THE NAVIGATION
+  if (width >= 769) {
+    $.scrollLock(false)
+  }
+  if (width < 769 && expanded) {
+    $.scrollLock(true)
+  }
 })
 
 $(window).scroll(function () {
@@ -35,8 +58,8 @@ function fadeIn (px_scrolled) {
   $('.fade-in').each(function () {
     var pos = $(this).offset().top
     var breakpoint = px_scrolled + ($(window).height() * (2/3))
+
     if (pos < breakpoint && !$(this).hasClass('animated')) {
-      console.log('ran')
       $(this).removeClass('hidden').addClass('animated')
     }
   })
