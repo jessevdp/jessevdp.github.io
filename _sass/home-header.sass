@@ -42,6 +42,7 @@ header.home
 
     h1
       font-size: 2.5rem
+      font-weight: 100!important
     h3, h1
       margin: 1rem 0
       color: $text-color-light-secondary
@@ -50,6 +51,7 @@ header.home
         font-style: italic
         color: $text-color-light
         font-weight: 500
+        animation: breathe-color 2s infinite alternate
 
     +mediaQ('md')
       position: relative
@@ -62,3 +64,9 @@ header.home
       h3
         font-size: 1.5rem
         text-align: center
+
+@keyframes breathe-color
+  from
+    background-color: none
+  to
+    background-color: $color-main
