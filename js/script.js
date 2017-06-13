@@ -14,11 +14,13 @@ $(window).scroll(function () {
 
   var $nav= $('nav.top')
   // Current state -> Boolean
-  var state = $nav.attr('data-scrolled')
-  if (state === 'true') state = true
-  if (state === 'false') state = false
+  var navState = $nav.attr('data-scrolled')
+  if (navState === 'true') navState = true
+  if (navState === 'false') navState = false
   // Run the function
-  navScroll($nav, px_scrolled, 10, state)
+  navScroll($nav, px_scrolled, 10, navState)
+
+  fadeIn(px_scrolled)
 })
 
 function navScroll ($element, px_scrolled, breakpoint, current) {
@@ -28,3 +30,19 @@ function navScroll ($element, px_scrolled, breakpoint, current) {
     $element.attr('data-scrolled', false)
   }
 }
+
+function fadeIn (px_scrolled) {
+  $('.fade-in').each(function () {
+    var pos = $(this).offset().top
+    var breakpoint = px_scrolled + ($(window).height() * (2/3))
+    if (pos < breakpoint && !$(this).hasClass('animated')) {
+      console.log('ran')
+      $(this).removeClass('hidden').addClass('animated')
+    }
+  })
+}
+$(document).ready(function () {
+  $('.fade-in').addClass('hidden')
+  // Take care of the elements already in view right from the start.
+  $('.fade-in.now').removeClass('hidden').addClass('animated')
+})

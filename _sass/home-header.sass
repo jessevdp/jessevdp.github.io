@@ -38,7 +38,7 @@ header.home
     position: absolute
     bottom: 15%
     padding: 0 $side-spacing-small
-    max-width: $max-width
+    max-width: 500px
 
     h1
       font-size: 2.5rem
@@ -52,10 +52,10 @@ header.home
         font-weight: 500
 
     +mediaQ('md')
+      position: relative
       padding: 0 $side-spacing
-      bottom: 25%
-      left: 50%
-      transform: translateX(-50%)
+      bottom: 50%
+      margin: 0 auto
       h1
         font-size: 3rem
         text-align: center
