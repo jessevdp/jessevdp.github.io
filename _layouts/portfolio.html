@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include portfolio/head.html %}
+  </head>
+  <body class="{{ page.title }}">
+    {% include navbar.html style="dark" %}
+
+    {{ content }}
+
+    {% include cta.html %}
+    {% include footer.html %}
+
+  </body>
+  {% include scripts.html %}
+</html>
