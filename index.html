@@ -7,7 +7,7 @@ layout: default
 
 <header class="home">
   <div class="background"></div>
-  <main>
+  <main class="fade-in now">
     <h3>Hi, my name is Jesse</h3>
     <h1>Student, <span>Programmer</span> and <span>Designer</span> from the Netherlands</h1>
   </main>
@@ -15,14 +15,14 @@ layout: default
 </header>
 
 <section id="portfolio">
-  <header>
+  <header class="fade-in">
     <h2>I Create Delight.</h2>
     <p>
       Take a look at my portfolio below to see what I've got.
     </p>
   </header>
 
-  <main>
+  <main class="fade-in">
     <a href="#" class="item">
       <div class="image" style="background-image: url('https://source.unsplash.com/-VMh-jZ6nRY')"></div>
 
@@ -76,7 +76,7 @@ layout: default
 </section>
 
 <section id="about">
-  <article>
+  <article class="fade-in">
     <div class="text">
       <h2>My story</h2>
       {% capture my-story %}{% include content/my-story.md %}{% endcapture %}
@@ -85,7 +85,7 @@ layout: default
     <div class="image" style="background-image: url(https://source.unsplash.com/x7CDil50KKY)"></div>
   </article>
 
-  <article>
+  <article class="fade-in">
     <div class="image" style="background-image: url(https://source.unsplash.com/OqtafYT5kTw)"></div>
     <div class="text">
       <h2>Programming</h2>
@@ -94,7 +94,7 @@ layout: default
     </div>
   </article>
 
-  <article>
+  <article class="fade-in">
     <div class="text">
       <h2>Design</h2>
       {% capture design %}{% include content/design.md %}{% endcapture %}
