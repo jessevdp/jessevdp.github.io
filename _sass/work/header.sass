@@ -1,0 +1,50 @@
+header.work
+  padding: $vertical-spacer-small $side-spacing-small
+  margin-top: $navbar-height-small
+
+  >h1
+    margin-bottom: $vertical-spacer-small
+    text-align: center
+    font-size: 3rem
+    font-weight: 500
+
+  .wrapper
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    justify-content: space-between
+
+    main
+      width: 100%
+      p
+        max-width: 350px
+    aside
+      margin-top: 2rem
+      font-size: 1.1rem
+      display: flex
+      flex-direction: column
+      .header
+        text-transform: uppercase
+        font-weight: 500
+      a
+        font-weight: 300
+        color: $text-color-dark-secondary
+        text-decoration: none
+        transition: all 300ms
+        &:hover
+          color: $text-color-dark
+
+  +mediaQ('sm')
+    padding: $vertical-spacer $side-spacing
+    margin-top: $navbar-height
+
+    >h1
+      margin-bottom: $vertical-spacer
+    .wrapper
+      main
+        width: 70%
+      aside
+        margin-top: 0
+  +mediaQ('md')
+    .wrapper
+      justify-content: flex-start
