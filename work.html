@@ -28,15 +28,16 @@ permalink: /work/
 </header>
 
 <section id="portfolio">
-  {% for i in (1..11) %}
-  <a href="#" class="item fade-in">
-    <div class="image" style="background-image: url('https://source.unsplash.com/random')"></div>
+  {% for post in site.posts %}
+  <a href="{{ post.url }}" class="item fade-in">
+    <div class="image" style="background-image: url({{ post.thumbnail }})"></div>
 
     <div class="details">
-      <h3>Title Goes Here</h3>
+      <h3>{{ post.title }}</h3>
       <div class="tags">
-        <div class="tag"><i class="ion-md-pricetag"></i>Web Development</div>
-        <div class="tag"><i class="ion-md-pricetag"></i>Web Design</div>
+        {% for tag in page.tags %}
+        <div class="tag"><i class="ion-md-pricetag"></i>{{ tag }}</div>
+        {% endfor %}
       </div>
     </div>
   </a>
