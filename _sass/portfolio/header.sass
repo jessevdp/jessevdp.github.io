@@ -67,17 +67,18 @@ header
         text-decoration: none
         font-weight: bold
         margin-top: 1rem
+        font-size: .8rem
+        //letter-spacing: .1rem
+        word-spacing: .1rem
         &:after
           position: absolute
           display: block
           content: ''
-          background-color: $text-color-dark
+          background-color: $text-color-dark-secondary
           height: 2px
           width: 100%
         &:hover
           color: $color-main
-          &:after
-            background-color: $color-main
 
   +mediaQ('md')
     margin-top: $navbar-height

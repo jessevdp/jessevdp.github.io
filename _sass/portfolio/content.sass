@@ -1,11 +1,75 @@
 .content
   padding: $vertical-spacer-small $side-spacing-small
+  >*
+    margin-bottom: $vertical-spacer-small
+    &:last-child
+      margin-bottom: 0!important
+  img
+    width: 100%
 
   +mediaQ('md')
     padding: $vertical-spacer $side-spacing
+    >*
+      margin-bottom: $vertical-spacer
 
+  strong
+    font-weight: 500
+  a
+    font-weight: 300
+    color: $text-color-dark
+    &:hover
+      color: $color-main
 
+  section
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
 
+    .header
+      width: 100%
+      padding-right: 4rem
+      font-size: 2rem
+      font-weight: 300
+      color: $text-color-dark
+      margin-bottom: 2rem
+    .text
+      max-width: $max-width
+      width: 100%
+      >*
+        margin-bottom: 2rem
+        &:last-child
+          margin-bottom: 0
+
+    +mediaQ('md')
+      flex-wrap: nowrap
+      .header
+        width: 350px
+        font-size: 2.5rem
+        font-weight: 500
+      .text
+        width: auto
+        p
+          font-size: 1.6rem
+          font-weight: 100
+
+  .two-up
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+    >*
+      margin-bottom: 2rem
+      width: 100%
+      box-sizing: border-box
+
+    +mediaQ('sm')
+      >*
+        margin-bottom: 0
+        width: 50%
+        &:first-child
+          padding-right: .5rem
+        &:last-child
+          padding-left: .5rem
 
 // CODE HIGHLIGHTING
 // -------------------
@@ -29,6 +93,15 @@ $dark: #111
 $grey: #808080
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+
+code.highlighter-rouge
+  font-family: 'Roboto Mono', monospace
+  background-color: #ccc
+  font-weight: 300
+  font-size: .7em
+  padding: 0 .3rem
+  border-radius: 3px
+  color: $text-color-dark
 
 .highlight
   margin: 0
