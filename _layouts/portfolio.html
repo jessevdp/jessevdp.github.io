@@ -42,7 +42,7 @@
           <div class="collection">
             <div class="header">tags</div>
             {% for tag in page.tags %}
-            <a href="#">{{ tag }}</a>
+            <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}">{{ tag }}</a>
             {% endfor %}
           </div>
           {% if page.live-version %}
