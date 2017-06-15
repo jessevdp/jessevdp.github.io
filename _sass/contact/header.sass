@@ -1,0 +1,26 @@
+header.contact
+  margin-top: $navbar-height-small
+
+  main
+    padding: $vertical-spacer-small 0
+    margin: 0 $side-spacing-small
+    text-align: center
+    border-top: 1px solid #ccc
+    p
+      margin: 0 auto
+      width: 60vw
+      max-width: 400px
+
+    .social
+      font-size: 2rem
+      margin-top: 1rem
+      a
+        color: $text-color-dark-secondary
+        &:hover
+          color: $color-main
+
+  +mediaQ('md')
+    margin-top: $navbar-height
+    main
+      padding: $vertical-spacer 0
+      margin: 0 $side-spacing

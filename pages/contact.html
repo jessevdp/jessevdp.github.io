@@ -1,0 +1,84 @@
+---
+title: contact
+layout: default
+permalink: /contact/
+---
+
+{% include navbar.html style="dark" %}
+
+<header class="contact">
+  <main class="fade-in now">
+    <h2>Let's Work Together.</h2>
+    <p>
+      Get in touch with me using the contact form below or connect
+      with me via one of my social media channels.
+    </p>
+    <div class="social">
+      <a href="{{ site.links.github }}" target="_blank"><i class="ion-logo-github"></i></a>
+      <a href="{{ site.links.instagram }}" target="_blank"><i class="ion-logo-instagram"></i></a>
+      <a href="{{ site.links.twitter }}" target="_blank"><i class="ion-logo-twitter"></i></a>
+      <a href="{{ site.links.linkedin }}" target="_blank"><i class="ion-logo-linkedin"></i></a>
+    </div>
+  </main>
+</header>
+
+<section id="form">
+  <form class="fade-in" action="/" method="get">
+
+    <input type="hidden" name="*redirect" value="{{ site.baseurl }}/" />
+    <input type="hidden" name="*formname" value="contact_form" />
+    <input type="hidden" name="*honeypot" />
+
+    <div class="full-width">
+      <div class="form-group">
+        <label>Subject <span>*</span></label>
+        <input type="text" name="subject"/>
+      </div>
+    </div>
+
+    <div class="two-up">
+      <div class="form-group">
+        <label>First name <span>*</span></label>
+        <input type="text" name="first_name"/>
+      </div>
+      <div class="form-group">
+        <label>Last name <span>*</span></label>
+        <input type="text" name="last_name"/>
+      </div>
+    </div>
+
+    <div class="two-up">
+      <div class="form-group">
+        <label>Email address <span>*</span></label>
+        <input type="text" name="email"/>
+      </div>
+      <div class="form-group">
+        <label>Company or organization</label>
+        <input type="text" name="company-organization"/>
+      </div>
+    </div>
+
+    <div class="two-up">
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" name="email"/>
+      </div>
+      <div class="form-group">
+        <label>How did you find me?</label>
+        <select name="found-me" />
+          <option value="search-engine" />Search Engine</option>
+          <option value="social-media" />Social Media</option>
+          <option value="referral" />Referral / Recommendation</option>
+          <option value="other" />Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="full-width">
+      <textarea name="message" placeholder="Your message here..." ></textarea/>    
+    </div>
+
+    <input type="submit" class="btn btn-default" value="Finish!" />
+
+  </form>
+</section>
