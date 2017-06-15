@@ -8,27 +8,26 @@
     {% include navbar.html style="dark" %}
 
     <header class="work fade-in now">
-      <h1>My Portfolio:</h1>
-
-      <div class="wrapper">
-        <main>
-          <h2>I Create Delight</h2>
-          <p>
-            Take a look at my portfolio below to see what I've got.
-          </p>
-        </main>
-        <aside>
-          <div class="header">tags</div>
+      <main>
+        <h2>I Create Delight</h2>
+        <p>
+          Take a look at my portfolio below to see what I've got.
+        </p>
+      </main>
+      <nav class="fade-in">
+        <div class="tags">
+          <a href="{{ site.baseurl }}/work">all tags</a>
           <a class="active" href="{{ site.baseurl }}/tags/{{ page.tag | slugify }}">{{ page.tag }}</a>
-          {% for tag in site.tags %}
-            {% if page.tag != tag[0] %}
+          {% for tag in site.tags %} {% if page.tag != tag[0] %}
           <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
-            {% endif %}
-          {% endfor %}
-          <a class="clear" href="{{ site.baseurl }}/work">clear tags</a>
-        </aside>
-      </div><!-- /wrapper-->
+          {% endif %} {% endfor %}
+        </div>
+        <div class="arrow">
+          <i class="ion-ios-arrow-forward"></i>
+        </div>
+      </nav>
     </header>
+
 
     <section id="portfolio">
       {% for post in site.tags[page.tag] %}
