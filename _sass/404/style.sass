@@ -1,0 +1,37 @@
+body[class="404"]
+  header
+    margin: 0 $side-spacing-small
+    margin-top: $navbar-height-small
+    padding: $vertical-spacer-small 0
+
+    border-top: 1px solid #ccc
+    .wrapper
+      >*
+        max-width: 500px
+        margin-bottom: 1rem
+      h1
+        font-size: 5rem
+        font-weight: bold
+        color: $color-main //#777
+      h2
+        font-size: 2rem
+        font-weight: 300
+      .links
+        display: flex
+        flex-direction: column
+        .header
+          margin-bottom: .5rem
+        a
+          color: $color-main
+          text-decoration: none
+
+          &:hover
+            text-decoration: underline
+
+    +mediaQ('md')
+      margin: 0 $side-spacing
+      margin-top: $navbar-height
+      padding: $vertical-spacer 0
+
+      .wrapper
+        padding-left: 8rem
