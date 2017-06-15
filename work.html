@@ -6,22 +6,23 @@ permalink: /work/
 {% include navbar.html style="dark" %}
 
 <header class="work fade-in now">
-  <h1>My Portfolio:</h1>
-
-  <div class="wrapper">
-    <main>
-      <h2>I Create Delight</h2>
-      <p>
-        Take a look at my portfolio below to see what I've got.
-      </p>
-    </main>
-    <aside>
-      <div class="header">tags</div>
+  <main>
+    <h2>I Create Delight</h2>
+    <p>
+      Take a look at my portfolio below to see what I've got.
+    </p>
+  </main>
+  <nav class="fade-in">
+    <div class="tags">
+      <a class="active" href="{{ site.baseurl }}/work">all tags</a>
       {% for tag in site.tags %}
       <a href="{{ site.baseurl }}/tags/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
       {% endfor %}
-    </aside>
-  </div><!-- /wrapper-->
+    </div>
+    <div class="arrow">
+      <i class="ion-ios-arrow-forward"></i>
+    </div>
+  </nav>
 </header>
 
 <section id="portfolio">
