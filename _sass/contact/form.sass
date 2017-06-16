@@ -1,5 +1,6 @@
 section#form
   $form-spacer: 3rem
+  $form-spacer-small: 1.5rem
   $form-spacer-inner: 1.5rem
 
   background-color: $color-dark
@@ -15,7 +16,7 @@ section#form
     box-sizing: border-box
     position: relative
     width: 100%
-    margin-bottom: $form-spacer
+    margin-bottom: $form-spacer-small
 
 
     label
@@ -90,6 +91,9 @@ section#form
 
   +mediaQ('md')
     padding: $vertical-spacer $side-spacing
+
+    .form-group
+      margin-bottom: $form-spacer
 
     .two-up
       display: flex
