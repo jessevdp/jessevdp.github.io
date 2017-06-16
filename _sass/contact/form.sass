@@ -1,6 +1,97 @@
 section#form
+  $form-spacer: 3rem
+  $form-spacer-inner: 1.5rem
+
   background-color: $color-dark
   padding: $vertical-spacer-small $side-spacing-small
+  *
+    font-weight: 300
+
+  form
+    max-width: 900px
+    margin: 0 auto
+
+  .form-group
+    box-sizing: border-box
+    position: relative
+    width: 100%
+    margin-bottom: $form-spacer
+
+
+    label
+      position: absolute
+      left: $form-spacer-inner
+      font-size: 1.5rem
+      transition: all 300ms
+      &:hover
+        cursor: pointer
+      span
+        color: $color-main
+    &:not(.textarea) label
+      top: 50%
+      transform: translateY(-50%)
+    &.textarea label
+      top: $form-spacer-inner
+    &.focussed label
+      opacity: 0
+      visibility: hidden
+
+    input[type="text"], textarea
+      box-sizing: border-box
+      width: 100%
+      padding: $form-spacer-inner
+      font-size: 1.5rem
+
+      color: $text-color-dark-secondary
+
+      // Browsers resets
+      border: none
+      border-radius: 0
+      &:focus
+        outline: 0
+
+    textarea
+      min-height: 300px
+      max-height: 500px
+      resize: vertical
+
+  .two-up
+    display: flex
+    flex-wrap: wrap
+    .form-group
+      width: 100%
+
+  .bottom-row
+    display: flex
+    flex-wrap: wrap-reverse
+    justify-content: space-between
+
+    .required
+      color: $text-color-light-secondary
+      span
+        color: $color-main
+
+    .submit
+      background-color: $color-main
+      color: $text-color-light
+      padding: $form-spacer-inner
+      font-size: 1.5rem
+      cursor: pointer
+
+      &:hover
+        background-color: #fff
+        color: $text-color-dark
 
   +mediaQ('md')
     padding: $vertical-spacer $side-spacing
+
+    .two-up
+      display: flex
+      .form-group
+        width: 50%
+        &:first-child
+          padding-right: ($form-spacer / 2)
+        &:last-child
+          padding-left: ($form-spacer / 2)
+          label
+            left: $form-spacer-inner + ($form-spacer / 2)
