@@ -72,15 +72,21 @@ section#form
         color: $color-main
 
     .submit
+      width: 100%
+      text-align: center
+      margin-bottom: 1rem
+
       background-color: $color-main
       color: $text-color-light
       padding: $form-spacer-inner
       font-size: 1.5rem
       cursor: pointer
 
+      transition: all 300ms
+
       &:hover
         background-color: #fff
-        color: $text-color-dark
+        color: $color-main
 
   +mediaQ('md')
     padding: $vertical-spacer $side-spacing
@@ -95,3 +101,7 @@ section#form
           padding-left: ($form-spacer / 2)
           label
             left: $form-spacer-inner + ($form-spacer / 2)
+    .bottom-row .submit
+      text-align: left
+      width: fit-content
+      margin-bottom: 0
