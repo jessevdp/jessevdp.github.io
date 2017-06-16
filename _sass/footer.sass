@@ -42,6 +42,7 @@ footer
 
     .legal
       font-size: .8rem
+      font-weight: 300
     .social
       font-size: 2rem
 
@@ -49,6 +50,10 @@ footer
         color: $text-color-dark-secondary
         &:hover
           color: $text-color-light
+          
+    +mediaQ('lg')
+      .legal
+        font-size: 1rem
 
   +mediaQ('max-md')
     nav
