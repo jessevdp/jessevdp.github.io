@@ -132,8 +132,10 @@ section#form
           padding-right: ($form-spacer / 2)
         &:last-child
           padding-left: ($form-spacer / 2)
-          label
+          label:not(.error)
             left: $form-spacer-inner + ($form-spacer / 2)
+          label.error
+            left: ($form-spacer / 2)
     .bottom-row .submit
       text-align: left
       width: fit-content
