@@ -2,9 +2,28 @@ section#form
   $form-spacer: 3rem
   $form-spacer-small: 1.5rem
   $form-spacer-inner: 1.5rem
+  $red: #f44336
 
   background-color: $color-dark
   padding: $vertical-spacer-small $side-spacing-small
+
+  #error
+    font-size: 1rem
+    background-color: $red
+    color: $text-color-light
+    text-align: center
+    padding: $form-spacer-inner
+    margin: $form-spacer-small 0
+
+    display: none
+    opacity: 0
+    transition: opacity 500ms 500ms ease-in-out
+    span
+      font-weight: bold
+    &.active
+      opacity: 1
+      display: block
+
   *
     font-weight: 300
 
@@ -19,7 +38,7 @@ section#form
     margin-bottom: $form-spacer-small
 
 
-    label
+    label:not(.error)
       position: absolute
       left: $form-spacer-inner
       font-size: 1.5rem
@@ -28,12 +47,12 @@ section#form
         cursor: pointer
       span
         color: $color-main
-    &:not(.textarea) label
+    &:not(.textarea) label:not(.error)
       top: 50%
       transform: translateY(-50%)
-    &.textarea label
+    &.textarea label:not(.error)
       top: $form-spacer-inner
-    &.focussed label
+    &.focussed label:not(.error)
       opacity: 0
       visibility: hidden
 
@@ -55,6 +74,13 @@ section#form
       min-height: 300px
       max-height: 500px
       resize: vertical
+
+    label.error
+      position: absolute
+      top: 100%
+      left: 0
+      padding-top: .2rem
+      color: $red
 
   .two-up
     display: flex
@@ -94,6 +120,9 @@ section#form
 
     .form-group
       margin-bottom: $form-spacer
+
+      label.error
+        padding-top: .5rem
 
     .two-up
       display: flex
