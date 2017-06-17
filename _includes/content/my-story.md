@@ -1,4 +1,4 @@
-My name is Jesse van der Pluijm. I'm a student, programmer and designer from the Netherlands who loves music, sports and life itself 😇
+My name is Jesse van der Pluijm. I'm a student, programmer and designer from the Netherlands who loves music, sports and life itself.
 
 I'm a fan of kitesurfing, snowboarding, hiking & kickboxing.
 
