@@ -61,7 +61,7 @@ An important part of every brand is their trademark. It makes identifying the br
 
 I started out with my entire name (Jesse) in a graffiti style. While this worked it looked way too cluttered for my taste. I ended up simplifying things, the end result:
 
-![logo sketch](/assets/global/logo-circle.svg)
+![final logo](/assets/global/logo-circle.svg)
 
 {% endcapture %}{{ text | markdownify }}</div></section>
 
@@ -89,7 +89,7 @@ What is this and is it for me? (Is it what I'm looking for?) Does it work? (Is h
 
 With these 3 questions in mind I started laying out the landing page. The page that would also hold my story.
 
-![logo sketch](/assets/portfolio/rebranding-myself/wireframe.jpg)
+![wireframe](/assets/portfolio/rebranding-myself/wireframe.jpg)
 
 Although the overall layout changed a slight bit over the many design iterations the main structure was set. Time to work on the graphical side of the design.
 
@@ -103,7 +103,7 @@ The website would have to look really sleek and be a good representation of my s
 
 I got to work using my favorite design/prototyping software [AdobeXD](http://www.adobe.com/products/experience-design.html). The file you see below shows the design for all the pages. Some of the layout changed. I have a tendency to change little things while I'm developing but the design file shows the main theme.
 
-![logo sketch](/assets/portfolio/rebranding-myself/design.jpg)
+![website design](/assets/portfolio/rebranding-myself/design.jpg)
 
 {% endcapture %}{{ text | markdownify }}</div></section>
 
@@ -113,7 +113,7 @@ I got to work using my favorite design/prototyping software [AdobeXD](http://www
 
 Time to start taking all these ideas and making them into reality. Almost. I had a couple more decisions to make. Where am I going to host this site? Content management system? Those kinds of things.
 
-Most of my code is open source and lives on [GitHub](https://github.com). Therefore I knew about something called GitHub pages (gh-pages). A service GitHub offers providing free website hosting for developers who contribute to the open source community. I also knew that gh-pages offered support for [jekyll](https://jekyllrb.com)— a static site generator.
+Most of my code is open sourced and lives on [GitHub](https://github.com). Therefore I knew about something called GitHub pages (gh-pages). A service GitHub offers providing free website hosting for developers who contribute to the open source community. I also knew that gh-pages offered support for [jekyll](https://jekyllrb.com)— a static site generator.
 
 Jekyll takes a whole bunch of text documents and spits them out as a static website. It's a content management system of sorts but it lacks a proper Graphical User Interface. But honestly I don't really need a CMS with a fancy user interface. I prefer to work with text documents.
 
