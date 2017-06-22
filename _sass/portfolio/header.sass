@@ -11,28 +11,33 @@ header
     max-width: $max-width
     margin: 0 auto
 
-  .wrapper
+  .intro
     padding: $vertical-spacer-small 0
     margin: 0 $side-spacing-small
     padding-top: 0!important
     border-bottom: 1px solid $text-color-dark-secondary
+    text-align: center
 
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
+    .wrapper
+      text-align: left
+      margin: 0 auto
+      display: inline-flex
+      flex-wrap: wrap
 
     main
       width: 100%
-      >h2
-        max-width: 70%
+      max-width: 690px
+      padding-right: $side-spacing-small
 
+      >h2
+        margin-bottom: 0
       summary
         display: flex
         flex-wrap: wrap
         article
+          padding: 3rem 1rem 0 0
           box-sizing: border-box
-          width: 80%
-          margin-bottom: 1rem
+          width: 100%
 
           .header
             font-weight: 500
@@ -43,7 +48,6 @@ header
       font-weight: 300
       margin-top: 3rem
       color: $text-color-dark-secondary
-      width: 100%
       font-size: 1rem
       .collection
         margin-bottom: 1rem
@@ -90,26 +94,23 @@ header
       padding: $vertical-spacer $side-spacing
       margin: 0 auto
 
-    .wrapper
+    .intro
       padding: $vertical-spacer 0
       margin: 0 $side-spacing
 
+      .wrapper
+        flex-wrap: nowrap
+
       main
-        width: 70%
-        min-width: 550px
-        max-width: $max-width
-        margin-right: 2rem
-        summary article
-          width: 50%
-          &:first-child
-            padding-right: .5rem
-          &:last-child
-            padding-left: .5rem
+        padding-right: $side-spacing
 
       aside
-        margin-top: 0
-        width: 22%
+        margin-top: 1rem
 
+  +mediaQ('lg')
+    .intro
+      main summary article
+        width: 50%
   +mediaQ('xl')
-    .wrapper
-      justify-content: space-around
+    .intro main
+      max-width: 750px

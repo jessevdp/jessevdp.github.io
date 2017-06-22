@@ -9,46 +9,50 @@
     <header>
       <img class="fade-in now" src="{{ page.thumbnail }}" alt="thumbnail">
       <h1 class="fade-in">{{ page.title }}</h1>
-      <div class="wrapper fade-in">
-        <main>
-          <h2>{{ page.headline }}</h2>
-          <summary>
-            <article>
-              <div class="header">Challenge</div>
-              <p>
-                {{ page.challenge }}
-              </p>
-            </article>
-            <article>
-              <div class="header">Outcome</div>
-              <p>
-                {{ page.outcome }}
-              </p>
-            </article>
-          </summary>
-        </main>
+      <div class="intro fade-in">
+        <div class="wrapper">
 
-        <aside>
-          <div class="collection">
-            <div class="header">date</div>
-            <span>{{ page.date | date: '%B %d, %Y' }}</span>
-          </div>
-          <div class="collection">
-            <div class="header">collaborators</div>
-            {% for collaborator in page.collaborators %}
-            <a href="{{ collaborator.url }}" target="_blank">{{ collaborator.name }}</a>
-            {% endfor %}
-          </div>
-          <div class="collection">
-            <div class="header">tags</div>
-            {% for tag in page.tags %}
-            <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}">{{ tag }}</a>
-            {% endfor %}
-          </div>
-          {% if page.live-version %}
-          <a href="{{ page.live-version }}" target="_blank">see in action</a>
-          {% endif %}
-        </aside>
+          <main>
+            <h2>{{ page.headline }}</h2>
+            <summary>
+              <article>
+                <div class="header">Challenge</div>
+                <p>
+                  {{ page.challenge }}
+                </p>
+              </article>
+              <article>
+                <div class="header">Outcome</div>
+                <p>
+                  {{ page.outcome }}
+                </p>
+              </article>
+            </summary>
+          </main>
+
+          <aside>
+            <div class="collection">
+              <div class="header">date</div>
+              <span>{{ page.date | date: '%B %d, %Y' }}</span>
+            </div>
+            <div class="collection">
+              <div class="header">collaborators</div>
+              {% for collaborator in page.collaborators %}
+              <a href="{{ collaborator.url }}" target="_blank">{{ collaborator.name }}</a>
+              {% endfor %}
+            </div>
+            <div class="collection">
+              <div class="header">tags</div>
+              {% for tag in page.tags %}
+              <a href="{{ site.baseurl }}/tags/{{ tag | slugify }}">{{ tag }}</a>
+              {% endfor %}
+            </div>
+            {% if page.live-version %}
+            <a href="{{ page.live-version }}" target="_blank">see in action</a>
+            {% endif %}
+          </aside>
+
+        </div>
       </div>
     </header>
 
