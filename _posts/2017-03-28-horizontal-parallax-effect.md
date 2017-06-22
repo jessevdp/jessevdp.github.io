@@ -16,10 +16,8 @@ challenge: "Create a parallax effect that's 100% controlled by scrolling. Make i
 outcome: "Two separate ways of doing this. One is linear, the other has easing. Both are really cool!"
 ---
 
-<section class="fade-in">
-  <div class="header">Intro</div>
-  <div class="text">{% capture text %}
-
+<section class="fade-in">{% capture text %}
+# Intro
 Let's start with a little backstory and some explaining. Lately there has been a lot of interest in parallax effects on the web. It's a technique used to draw the users attention to a specific point using motion and a sense of depth.
 
 An example: a user would scroll and all of the sudden see a hole in the website that reveals just a little part of a product. As the user scrolls other parts slide into view.
@@ -28,22 +26,18 @@ An example: a user would scroll and all of the sudden see a hole in the website 
 
 What I wanted to do was create a sort of motion controlled by the users scroll but make it horizontal. You could for example have a little bird fly across the screen as you scrolled. It would come into view on the bottom left corner of your screen and disappear into the top right corner.
 
-{% endcapture %}{{ text | markdownify }}</div></section>
+{% endcapture %}{{ text | markdownify }}</section>
 
-<section class="fade-in">
-  <div class="header">The Requirements</div>
-  <div class="text">{% capture text %}
-
+<section class="fade-in">{% capture text %}
+# The Requirements
 This animation would have to work on all screen sizes. Whatever combination of height and width it would always enter the screen in the bottom left corner and exit in the top right. Never somewhere halfway.
 
 The animation would have to purely be controlled by the users scroll. I didn't want to just start a css animation as soon as the element came into view. I wanted the user to feel in control. I figured that would create a real satisfactory effect.
 
-{% endcapture %}{{ text | markdownify }}</div></section>
+{% endcapture %}{{ text | markdownify }}</section>
 
-<section class="fade-in">
-  <div class="header">The First Approach</div>
-  <div class="text">{% capture text %}
-
+<section class="fade-in">{% capture text %}
+# The First Approach
 There would be two ways to do this. Either with or without easing. Without would be much much simpler so I started with that. I'll explain what I mean by easing later on.
 
 The easiest way to do this would be to place the element I wanted to apply the effect to somewhere on the page and then move it around using [`css translate`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate).
@@ -92,12 +86,10 @@ Here's another graph to hopefully clear things up a bit:
 
 ![graph](/assets/portfolio/horizontal-parallax/graph-2.svg){: .fade-in}
 
-{% endcapture %}{{ text | markdownify }}</div></section>
+{% endcapture %}{{ text | markdownify }}</section>
 
-<section class="fade-in">
-  <div class="header">The Second Approach</div>
-  <div class="text">{% capture text %}
-
+<section class="fade-in">{% capture text %}
+# The Second Approach
 As I said before— I decided that there would be two ways to do this. We did the one without easing, now it's time to do the one with easing.
 
 First of all, let's explain what I mean by easing. The in the first approach the element would move along the screen at a static pace in a linear fashion. The last graph in the previous section shows that.
@@ -122,24 +114,21 @@ function calcTranslate (height, width, scrolled) {
   return ((4 * width ) / Math.pow(height, 3)) * Math.pow(scrolled - (height / 2), 3) + (win_width/2)
 }
 ```
+{% endcapture %}{{ text | markdownify }}</section>
 
-{% endcapture %}{{ text | markdownify }}</div></section>
+<section class="fade-in" id="live">{% capture text %}
+# Live Version
+I went ahead and created a minimal [codepen](https://codepen.io/jessevdp/pen/wJYaxd) to demonstrate the effect. (Using the easing function) Keep in mind, this is just the bare code needed, you can make this a lot more fancy if you need to.
 
-<section class="fade-in" id="live">
-  <div class="header">Live Version</div>
-  <div class="text">{% capture text %}
+***Heads up:*** **Some mobile browsers mess up the codepen. If it doesn't seem to work I suggest you take a look at this pen on a bigger screen.**
 
-  I went ahead and created a minimal [codepen](https://codepen.io/jessevdp/pen/wJYaxd) to demonstrate the effect. (Using the easing function) Keep in mind, this is just the bare code needed, you can make this a lot more fancy if you need to.
+<p data-height="500" data-theme-id="0" data-slug-hash="wJYaxd" data-default-tab="result" data-user="jessevdp" data-embed-version="2" data-pen-title="Horizontal easing parallax" class="codepen fade-in">See the Pen <a href="https://codepen.io/jessevdp/pen/wJYaxd/">Horizontal easing parallax</a> by Jesse van der Pluijm (<a href="https://codepen.io/jessevdp">@jessevdp</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-  ***Heads up:*** **Some mobile browsers mess up the codepen. If it doesn't seem to work I suggest you take a look at this pen on a bigger screen.**
+I've made this working version using the formula created earlier. I've used jQuery to help me interact with the `DOM` in a simpler manner.
 
-  <p data-height="500" data-theme-id="0" data-slug-hash="wJYaxd" data-default-tab="result" data-user="jessevdp" data-embed-version="2" data-pen-title="Horizontal easing parallax" class="codepen fade-in">See the Pen <a href="https://codepen.io/jessevdp/pen/wJYaxd/">Horizontal easing parallax</a> by Jesse van der Pluijm (<a href="https://codepen.io/jessevdp">@jessevdp</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+To make sure we don't ask the browser to over perform I've build in a couple of safe guards. For example: When the element goes outside of the screen we won't be moving the object around. When the user scrolls half a pixel (yes that's possible) we won't move the object around. When the element has to move half a pixel (according to the formula) we won't move the object around.
 
-  I've made this working version using the formula created earlier. I've used jQuery to help me interact with the `DOM` in a simpler manner.
+All these safe guards should make sure the animation runs smoothly in most browsers.
 
-  To make sure we don't ask the browser to over perform I've build in a couple of safe guards. For example: When the element goes outside of the screen we won't be moving the object around. When the user scrolls half a pixel (yes that's possible) we won't move the object around. When the element has to move half a pixel (according to the formula) we won't move the object around.
-
-  All these safe guards should make sure the animation runs smoothly in most browsers.
-
-{% endcapture %}{{ text | markdownify }}</div></section>
+{% endcapture %}{{ text | markdownify }}</section>
