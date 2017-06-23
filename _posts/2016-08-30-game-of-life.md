@@ -22,6 +22,7 @@ Let's start with a short introduction as to what the Game of life actually is:
 > [~ Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 Here's an example:
+
 ![example](/assets/portfolio/gol/example.gif){: .fade-in}
 
 {% endcapture %}{{ text | markdownify }}</section>
