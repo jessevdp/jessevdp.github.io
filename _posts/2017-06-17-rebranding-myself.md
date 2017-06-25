@@ -21,11 +21,9 @@ I had a problem. I wasn't achieving my goal. I wanted to be able to do the thing
 
 Once I clearly identified the goal I **asked why 3 times** to get to the root of why I hadn't achieved it yet.
 
-**Why** have you not yet achieved this goal? *I don't have many clients*.
-
-**Why** don't you have many clients? *I presume I don't have many clients because potential clients don't even know I exist*.
-
-**Why** don't potential clients know you exist? *There is no real way for them to find me, identify me and review my work*.
+**Why** have you not yet achieved this goal? *I don't have many clients*.  
+**Why** don't you have many clients? *I presume I don't have many clients because potential clients don't even know I exist*.  
+**Why** don't potential clients know you exist? *There is no real way for them to find me, identify me and review my work*.  
 
 {% endcapture %}{{ text | markdownify }}</section>
 
@@ -49,11 +47,11 @@ What I needed to go and do is manage my brand. Show people what I do so that nex
 # Trademark
 An important part of every brand is their trademark. It makes identifying the brand much simpler. In a moment of inspiration I started sketching:
 
-![logo sketch](/assets/portfolio/rebranding-myself/sketch.jpg)
+![logo sketch](/assets/portfolio/rebranding-myself/sketch.jpg){: .fade-in}
 
 I started out with my entire name (Jesse) in a graffiti style. While this worked it looked way too cluttered for my taste. I ended up simplifying things, the end result:
 
-![final logo](/assets/global/logo-circle.svg)
+![final logo](/assets/global/logo-circle.svg){: .fade-in}
 
 {% endcapture %}{{ text | markdownify }}</section>
 
