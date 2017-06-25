@@ -38,6 +38,14 @@ section#about
       max-width: $max-width
       margin: 0 auto
       box-sizing: border-box
+      // Overwrite links
+      a
+        font-weight: inherit
+        color: $color-main
+        &:hover
+          text-decoration: underline
+      strong
+        font-weight: 500
 
     .image
       width: 100vw
