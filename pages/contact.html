@@ -6,78 +6,99 @@ permalink: /contact/
 
 {% include navbar.html style="dark" %}
 
-<header class="contact">
-  <main class="fade-in now">
-    <h2>Let's Work Together.</h2>
-    <p>
-      Get in touch with me using the contact form below or connect
-      with me via one of my social media channels.
-    </p>
-    <div class="social">
-      <a href="{{ site.links.github }}" target="_blank"><i class="ion-logo-github"></i></a>
-      <a href="{{ site.links.instagram }}" target="_blank"><i class="ion-logo-instagram"></i></a>
-      <a href="{{ site.links.twitter }}" target="_blank"><i class="ion-logo-twitter"></i></a>
-      <a href="{{ site.links.linkedin }}" target="_blank"><i class="ion-logo-linkedin"></i></a>
-    </div>
-  </main>
-</header>
-
-<section id="form" class="fade-in">
-  <form class="fade-in" action="/" method="get">
-
-    <div id="error"><span>Oeps</span>, something went wrong... Check below and try again!</div>
-
-    <input type="hidden" name="*redirect" value="{{ site.baseurl }}/" />
-    <input type="hidden" name="*formname" value="contact_form" />
-    <input type="hidden" name="*honeypot" />
-
-    <div class="full-width">
-      <div class="form-group">
-        <label class="title">How can I help you? <span>*</span></label>
-        <input type="text" name="subject"/>
+<div class="initial">
+  <header class="contact">
+    <main class="fade-in now">
+      <h2>Let's Work Together</h2>
+      <p>
+        Get in touch with me using the contact form below or connect
+        with me via one of my social media channels.
+      </p>
+      <div class="social">
+        <a href="{{ site.links.github }}" target="_blank"><i class="ion-logo-github"></i></a>
+        <a href="{{ site.links.instagram }}" target="_blank"><i class="ion-logo-instagram"></i></a>
+        <a href="{{ site.links.twitter }}" target="_blank"><i class="ion-logo-twitter"></i></a>
+        <a href="{{ site.links.linkedin }}" target="_blank"><i class="ion-logo-linkedin"></i></a>
       </div>
-    </div>
+    </main>
+  </header>
 
-    <div class="two-up">
-      <div class="form-group">
-        <label class="title">First name <span>*</span></label>
-        <input type="text" name="first_name"/>
-      </div>
-      <div class="form-group">
-        <label class="title">Last name <span>*</span></label>
-        <input type="text" name="last_name"/>
-      </div>
-    </div>
+  <section id="form" class="fade-in">
+    <form class="fade-in" action="https://www.enformed.io/jzv4wy62" method="POST">
 
-    <div class="full-width">
-      <div class="form-group">
-        <label class="title">Email address <span>*</span></label>
-        <input type="text" name="email"/>
-      </div>
-    </div>
+      <div id="error"><span>Oeps</span>, something went wrong... Check below and <span>try again</span>!</div>
 
-    <div class="two-up">
-      <div class="form-group">
-        <label class="title">Location</label>
-        <input type="text" name="email"/>
-      </div>
-      <div class="form-group">
-        <label class="title">Company or organization?</label>
-        <input type="text" name="company-organization"/>
-      </div>
-    </div>
+      <!-- Honeypot against evil bots -->
+      <input type="text" name="_gotcha" style="display:none" />
 
-    <div class="full-width">
-      <div class="form-group textarea">
-        <label class="title">Tell me a little bit more</label>
-        <textarea name="message"></textarea/>
+      <div class="full-width">
+        <div class="form-group">
+          <label class="title">How can I help you? <span>*</span></label>
+          <input type="text" name="_subject"/>
+        </div>
       </div>
-    </div>
 
-    <div class="bottom-row">
-      <div class="required"><span>*</span> Required Field</div>
-      <div class="submit">Submit</div>
-    </div>
+      <div class="two-up">
+        <div class="form-group">
+          <label class="title">First name <span>*</span></label>
+          <input type="text" name="first_name"/>
+        </div>
+        <div class="form-group">
+          <label class="title">Last name <span>*</span></label>
+          <input type="text" name="last_name"/>
+        </div>
+      </div>
 
-  </form>
-</section>
+      <div class="full-width">
+        <div class="form-group">
+          <label class="title">Email address <span>*</span></label>
+          <input type="text" name="email"/>
+        </div>
+      </div>
+
+      <div class="two-up">
+        <div class="form-group">
+          <label class="title">Location</label>
+          <input type="text" name="location"/>
+        </div>
+        <div class="form-group">
+          <label class="title">Company or organization?</label>
+          <input type="text" name="company-organization"/>
+        </div>
+      </div>
+
+      <div class="full-width">
+        <div class="form-group textarea">
+          <label class="title">Tell me a little bit more</label>
+          <textarea name="message"></textarea/>
+        </div>
+      </div>
+
+      <div class="bottom-row">
+        <div class="required"><span>*</span> Required Field</div>
+        <button class="submit" type="submit">Submit</div>
+      </div>
+
+    </form>
+  </section>
+</div>
+
+<div class="after">
+  <header class="thankyou">
+    <main class="fade-in">
+      <h2>Thanks For Reaching Out!</h2>
+      <p>
+        I’ve recieved your message and will get back to you as soon as possible.
+        In the meantime why not take a look at some of my portfolio items?
+        Or perhaps connect with me via social media?
+      </p>
+      <div class="social">
+        <a href="{{ site.links.github }}" target="_blank"><i class="ion-logo-github"></i></a>
+        <a href="{{ site.links.instagram }}" target="_blank"><i class="ion-logo-instagram"></i></a>
+        <a href="{{ site.links.twitter }}" target="_blank"><i class="ion-logo-twitter"></i></a>
+        <a href="{{ site.links.linkedin }}" target="_blank"><i class="ion-logo-linkedin"></i></a>
+      </div>
+      <a class="cta" href="{{ site.baseurl }}/">go back gome</a>
+    </main>
+  </header>
+</div>

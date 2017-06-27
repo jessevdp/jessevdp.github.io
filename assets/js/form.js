@@ -7,7 +7,7 @@ $('.form-group').click(function () {
 $(document).mouseup(function (e) {
   $('.form-group.focussed').each(function () {
 
-    // If the field has content... Don't show the label
+    // If the field has content... Don't revert the label style
     var content = $(this).find('input').val() || $(this).find('textarea').val()
     if (content) { return }
 
@@ -24,7 +24,7 @@ $(document).on('click', '.submit', function () {
 $(document).ready(function (e) {
   $('section#form form').validate({
     rules: {
-      subject: 'required',
+      _subject: 'required',
       first_name: 'required',
       last_name: 'required',
       email: {
@@ -33,7 +33,7 @@ $(document).ready(function (e) {
       }
     },
     messages: {
-      subject: 'This field is required',
+      _subject: 'This field is required',
       first_name: 'This field is required',
       last_name: 'This field is required',
       email: {
@@ -41,11 +41,30 @@ $(document).ready(function (e) {
         email: 'Please enter a valid email'
       }
     },
-    invalidHandler: function (e, validator) {
-      $('html, body').animate({
-        scrollTop: $('section#form').offset().top
-      }, 500)
-      $('#error').addClass('active')
+    invalidHandler: formError,
+    submitHandler: function (form) {
+      $.ajax({
+        url: "https://formspree.io/jesse.vd.pluym@gmail.com",
+        method: "post",
+        dataType: "json",
+        accept: "application/json",
+        data: $(form).serialize(),
+        success: function(){
+          $('.initial').hide()
+          $('html, body').animate({
+            scrollTop: 0
+          }, 500)
+          $('.after').show()
+        },
+        error: formError
+      })
     }
   })
 })
+
+function formError () {
+  $('html, body').animate({
+    scrollTop: $('section#form').offset().top
+  }, 500)
+  $('#error').addClass('active')
+}
