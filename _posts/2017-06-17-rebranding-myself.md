@@ -102,3 +102,5 @@ Jekyll takes a whole bunch of text documents and spits them out as a static webs
 On top of that jekyll offers build in support for both [sass](http://sass-lang.com/) and [markdown](https://en.wikipedia.org/wiki/Markdown). Sass is a css preprocessor that helps me avoid repetition when writing stylesheets. Markdown is a lightweight markup language. It is designed to be converted into `HTML`.
 
 {% endcapture %}{{ text | markdownify }}</section>
+
+<img class="fade-in" src="/assets/portfolio/rebranding-myself/final.png" alt="Final Design" />
