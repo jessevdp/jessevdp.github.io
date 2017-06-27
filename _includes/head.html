@@ -20,6 +20,9 @@
 <meta name="msapplication-config" content="/assets/global/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+<!-- Force HTTPS connection. -->
+<script>if(window.location.protocol!="https:")window.location.href="https:"+window.location.href.substring(window.location.protocol.length);</script>
+
 <!-- Styles -->
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/master.css">
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ionicons.min.css">
