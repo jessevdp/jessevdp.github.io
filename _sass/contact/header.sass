@@ -1,4 +1,4 @@
-header.contact
+header.contact, header.thankyou
   margin-top: $navbar-height-small
 
   main
@@ -24,3 +24,12 @@ header.contact
     main
       padding: $vertical-spacer 0
       margin: 0 $side-spacing
+
+header.thankyou
+  .social
+    margin-bottom: $vertical-spacer-small
+  // Overwrite box shadow to white background
+  a.cta
+    box-shadow: 2px 2px 0px #fff, 4px 4px 0px $color-main
+    &:hover
+      box-shadow: none
